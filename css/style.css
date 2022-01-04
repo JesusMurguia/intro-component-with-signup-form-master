@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body{
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+    --light-grayish-blue: rgba(255, 255, 255, 0.582);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--red);
+    background-image: url("../images/bg-intro-desktop.png");
+}
+
+.container{
+    max-width: 1200px;
+}
+
+.container > .row{
+    height: 39rem;
+}
+
+#first-section{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    padding: 1rem 3rem 0 3rem;
+}
+
+#first-section h1{
+    font-weight: 700;
+    font-size: 3em;
+    margin-bottom: 1.5rem;
+}
+
+#first-section p{
+    font-weight: 600;
+    line-height: 1.75;
+    color: var(--light-grayish-blue);
+}
+
+#second-section{
+    padding: 2rem 3rem 1.5rem 1rem;
+}
+
+#second-section > .card{
+    padding: 1.1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    background-color: var(--blue);
+    color: white;
+    font-weight: 500;
+    box-shadow: 0 0.5rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-text{
+    padding: 0 1rem;
+}
+.card-text > span{
+    font-weight: 400;
+    color: var(--light-grayish-blue);
+}
+
+#third-section{
+    padding: 0 3rem 0 1rem;
+}
+
+#third-section > .card{
+    padding: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.disclaimer{
+    margin-top: 1rem;
+    font-size: 0.72em;
+    text-align: center;
+    color: var(--grayish-blue);
+    font-weight: 500;
+}
+
+a{
+    color: var(--red);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.form-control{
+    padding: 1rem 2rem;
+    color: var(--light-grayish-blue);
+    font-weight: 600;
+}
+
+.form-control:focus{
+    border-color: var(--blue);
+    text-decoration: none;
+}
+
+.btn{
+    padding: .75rem 0;
+    border-radius: 0.5rem;
+    border-bottom: 5px solid hsl(154, 58%, 43%);
+    background-color: var(--green);
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.error{
+    color: var(--red);
+    font-size: 0.7em;
+    font-weight: 500;
+    text-align: right;
+}
+
+.invalid-email-border{
+    border-color: var(--red);
+    background: url("../images/icon-error.svg") no-repeat right!important;
+    background-size: 1.5em!important;
+    background-position-x: 95% !important;
+    color: var(--red);
+}
+
+.hidden{
+    display: none;
+}
+
+.btn:hover{
+    color: white;
+    background: hsl(154, 53%, 74%);
+    border-color: hsl(154, 53%, 74%);
+}
+
+
+@media screen and (max-width: 768px) {
+    body{
+    background-image: url("../images/bg-intro-mobile.png");
+    }
+
+    #first-section{
+        padding: 0 2rem;
+    }
+
+    #first-section h1{
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    #first-section p{
+        font-size: 1rem;
+        text-align: center;
+        font-weight: 400;
+        color: white;
+        margin-bottom: 3rem;
+    }
+
+    #second-section{
+        padding: 0 1.5rem;
+    }
+
+    #third-section{
+        padding: 1.5rem;
+    }
+
+    #third-section > .card{
+        padding: 1.5rem;
+    }
+}
